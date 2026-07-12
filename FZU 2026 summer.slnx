@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="FZU 2026 summer/FZU 2026 summer.vcxproj" />
+</Solution>

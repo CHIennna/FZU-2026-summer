@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="FZU 2026 summer/FZU 2026 summer.vcxproj" />
+  <Project Path="FZU 2026 summer/FZU 2026 summer.vcxproj" Id="5d2d7cd2-e605-4a5c-b6c7-3b7bd929ab47" />
 </Solution>

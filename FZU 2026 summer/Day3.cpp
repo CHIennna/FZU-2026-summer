@@ -201,7 +201,6 @@ int bfs() {
 	queue<pii> q;
 	q.push({ x1,y1 });
     dist[x1][y1] = 0;
-    int res = 1e9;
 	while (!q.empty()) {
 		int x = q.front().first;
 		int y = q.front().second;

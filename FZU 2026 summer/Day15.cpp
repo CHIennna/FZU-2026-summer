@@ -157,3 +157,42 @@ int main() {
 	return 0;
 }
 
+//1044
+#include <cstdio>
+#include <iostream>
+using namespace std;
+int h[25];
+int main() {
+	//h[n] = h[0] * h[n-1]+ 
+	//       h[1] * h[n-2]+ ...+ h[n-1] * h[0]
+	int n;
+	cin >> n;
+	h[0] = 1;
+	h[1] = 1;
+	for (int i = 2; i <= n; i++) {
+		for (int j = 0; j < i; j++) {
+			h[i] += h[j] * h[i - j - 1];
+			//h[j]前半部分方案数， h[i-j-1]后半部分方案数 
+		}
+	}
+	cout << h[n];
+}
+
+#include<bits/stdc++.h>
+using namespace std;
+int n;
+int f[1005];//记忆化 
+int sol(int x) {
+	int ans = 1;
+	if (f[x] != -1)return f[x];
+	for (int i = 1; i <= x / 2; i++)ans += sol(i);
+	f[x] = ans;
+	return f[x];
+}
+int main() {
+	cin >> n;
+	memset(f, -1, sizeof(f));
+	f[1] = 1;
+	cout << sol(n);
+	return 0;
+}
